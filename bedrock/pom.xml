@@ -13,13 +13,13 @@
     </parent>
 
     <modules>
-        <module>bedrock-common</module>
+        <module>bedrock-common</module><!--
         <module>bedrock-v291</module>
         <module>bedrock-v313</module>
         <module>bedrock-v332</module>
         <module>bedrock-v340</module>
         <module>bedrock-v354</module>
-        <module>bedrock-v361</module>
+        <module>bedrock-v361</module>-->
         <module>bedrock-v388</module>
         <module>bedrock-v389</module>
     </modules>

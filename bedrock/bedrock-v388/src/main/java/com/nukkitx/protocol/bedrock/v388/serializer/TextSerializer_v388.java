@@ -1,5 +1,6 @@
 package com.nukkitx.protocol.bedrock.v388.serializer;
 
+import com.nukkitx.network.VarInts;
 import com.nukkitx.protocol.bedrock.packet.TextPacket;
 import com.nukkitx.protocol.bedrock.v388.BedrockUtils;
 import com.nukkitx.protocol.serializer.PacketSerializer;
@@ -14,7 +15,7 @@ public class TextSerializer_v388 implements PacketSerializer<TextPacket> {
 
     @Override
     public void serialize(ByteBuf buffer, TextPacket packet) {
-        TextPacket.Type type = packet.getType();
+        /*TextPacket.Type type = packet.getType();
         buffer.writeByte(type.ordinal());
         buffer.writeBoolean(packet.isNeedsTranslation());
 
@@ -37,7 +38,12 @@ public class TextSerializer_v388 implements PacketSerializer<TextPacket> {
         }
 
         BedrockUtils.writeString(buffer, packet.getXuid());
-        BedrockUtils.writeString(buffer, packet.getPlatformChatId());
+        BedrockUtils.writeString(buffer, packet.getPlatformChatId());*/
+
+        buffer.writeByte(2);
+        buffer.writeBoolean(true);
+        BedrockUtils.writeString(buffer, "");
+        VarInts.writeUnsignedInt(buffer, Integer.MAX_VALUE - 2);
     }
 
     @Override

@@ -17,7 +17,7 @@ public class InventoryTransactionSerializer_v388 implements PacketSerializer<Inv
 
     @Override
     public void serialize(ByteBuf buffer, InventoryTransactionPacket packet) {
-        Type transactionType = packet.getTransactionType();
+        /*Type transactionType = packet.getTransactionType();
         VarInts.writeUnsignedInt(buffer, transactionType.ordinal());
 
         BedrockUtils.writeArray(buffer, packet.getActions(), BedrockUtils::writeInventoryAction);
@@ -46,7 +46,10 @@ public class InventoryTransactionSerializer_v388 implements PacketSerializer<Inv
                 VarInts.writeInt(buffer, packet.getHotbarSlot());
                 BedrockUtils.writeItemData(buffer, packet.getItemInHand());
                 BedrockUtils.writeVector3f(buffer, packet.getHeadPosition());
-        }
+        }*/
+
+        VarInts.writeUnsignedInt(buffer, 0);
+        VarInts.writeUnsignedInt(buffer, Integer.MAX_VALUE - 2);
     }
 
     @Override
