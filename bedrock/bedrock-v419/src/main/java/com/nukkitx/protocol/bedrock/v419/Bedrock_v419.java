@@ -6,6 +6,7 @@ import com.nukkitx.protocol.bedrock.v291.serializer.*;
 import com.nukkitx.protocol.bedrock.v313.serializer.AddEntitySerializer_v313;
 import com.nukkitx.protocol.bedrock.v313.serializer.AvailableEntityIdentifiersSerializer_v313;
 import com.nukkitx.protocol.bedrock.v313.serializer.BiomeDefinitionListSerializer_v313;
+import com.nukkitx.protocol.bedrock.v313.serializer.LevelSoundEvent2Serializer_v313;
 import com.nukkitx.protocol.bedrock.v313.serializer.NetworkChunkPublisherUpdateSerializer_v313;
 import com.nukkitx.protocol.bedrock.v332.serializer.NetworkStackLatencySerializer_v332;
 import com.nukkitx.protocol.bedrock.v332.serializer.ResourcePacksInfoSerializer_v332;
@@ -143,7 +144,7 @@ public class Bedrock_v419 {
             .registerPacket(ScriptCustomEventPacket.class, ScriptCustomEventSerializer_v291.INSTANCE, 117)
             .registerPacket(SpawnParticleEffectPacket.class, SpawnParticleEffectSerializer_v332.INSTANCE, 118)
             .registerPacket(AvailableEntityIdentifiersPacket.class, AvailableEntityIdentifiersSerializer_v313.INSTANCE, 119)
-            .registerPacket(LevelSoundEvent2Packet.class, LevelSoundEvent2Serializer_v407.INSTANCE, 120)
+            .registerPacket(LevelSoundEvent2Packet.class, LevelSoundEvent2Serializer_v313.INSTANCE, 120)
             .registerPacket(NetworkChunkPublisherUpdatePacket.class, NetworkChunkPublisherUpdateSerializer_v313.INSTANCE, 121)
             .registerPacket(BiomeDefinitionListPacket.class, BiomeDefinitionListSerializer_v313.INSTANCE, 122)
             .registerPacket(LevelSoundEventPacket.class, LevelSoundEventSerializer_v407.INSTANCE, 123)
