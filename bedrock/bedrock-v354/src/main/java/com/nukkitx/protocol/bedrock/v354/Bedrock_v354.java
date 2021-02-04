@@ -5,6 +5,9 @@ import com.nukkitx.protocol.bedrock.packet.*;
 import com.nukkitx.protocol.bedrock.v291.serializer.*;
 import com.nukkitx.protocol.bedrock.v313.serializer.*;
 import com.nukkitx.protocol.bedrock.v332.serializer.*;
+import com.nukkitx.protocol.bedrock.v340.serializer.AvailableCommandsSerializer_v340;
+import com.nukkitx.protocol.bedrock.v340.serializer.InventoryTransactionSerializer_v340;
+import com.nukkitx.protocol.bedrock.v340.serializer.StructureBlockUpdateSerializer_v340;
 import com.nukkitx.protocol.bedrock.v340.serializer.VideoStreamConnectSerializer_v340;
 import com.nukkitx.protocol.bedrock.v354.serializer.*;
 import lombok.experimental.UtilityClass;
@@ -44,7 +47,7 @@ public class Bedrock_v354 {
             .registerPacket(EntityEventPacket.class, EntityEventSerializer_v291.INSTANCE, 27)
             .registerPacket(MobEffectPacket.class, MobEffectSerializer_v291.INSTANCE, 28)
             .registerPacket(UpdateAttributesPacket.class, UpdateAttributesSerializer_v291.INSTANCE, 29)
-            .registerPacket(InventoryTransactionPacket.class, InventoryTransactionSerializer_v291.INSTANCE, 30)
+            .registerPacket(InventoryTransactionPacket.class, InventoryTransactionSerializer_v340.INSTANCE, 30)
             .registerPacket(MobEquipmentPacket.class, MobEquipmentSerializer_v291.INSTANCE, 31)
             .registerPacket(MobArmorEquipmentPacket.class, MobArmorEquipmentSerializer_v291.INSTANCE, 32)
             .registerPacket(InteractPacket.class, InteractSerializer_v291.INSTANCE, 33)
@@ -90,7 +93,7 @@ public class Bedrock_v354 {
             .registerPacket(CameraPacket.class, CameraSerializer_v291.INSTANCE, 73)
             .registerPacket(BossEventPacket.class, BossEventSerializer_v291.INSTANCE, 74)
             .registerPacket(ShowCreditsPacket.class, ShowCreditsSerializer_v291.INSTANCE, 75)
-            .registerPacket(AvailableCommandsPacket.class, AvailableCommandsSerializer_v291.INSTANCE, 76)
+            .registerPacket(AvailableCommandsPacket.class, AvailableCommandsSerializer_v340.INSTANCE, 76)
             .registerPacket(CommandRequestPacket.class, CommandRequestSerializer_v291.INSTANCE, 77)
             .registerPacket(CommandBlockUpdatePacket.class, CommandBlockUpdateSerializer_v291.INSTANCE, 78)
             .registerPacket(CommandOutputPacket.class, CommandOutputSerializer_v291.INSTANCE, 79)
@@ -104,7 +107,7 @@ public class Bedrock_v354 {
             .registerPacket(StopSoundPacket.class, StopSoundSerializer_v291.INSTANCE, 87)
             .registerPacket(SetTitlePacket.class, SetTitleSerializer_v291.INSTANCE, 88)
             .registerPacket(AddBehaviorTreePacket.class, AddBehaviorTreeSerializer_v291.INSTANCE, 89)
-            .registerPacket(StructureBlockUpdatePacket.class, StructureBlockUpdateSerializer_v291.INSTANCE, 90)
+            .registerPacket(StructureBlockUpdatePacket.class, StructureBlockUpdateSerializer_v340.INSTANCE, 90)
             .registerPacket(ShowStoreOfferPacket.class, ShowStoreOfferSerializer_v291.INSTANCE, 91)
             .registerPacket(PurchaseReceiptPacket.class, PurchaseReceiptSerializer_v291.INSTANCE, 92)
             .registerPacket(PlayerSkinPacket.class, PlayerSkinSerializer_v291.INSTANCE, 93)
